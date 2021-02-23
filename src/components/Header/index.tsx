@@ -7,13 +7,14 @@ import { Link } from "../../styles";
 
 
 
+
 const Header= () => {
     const router = useRouter();
     const [noticias, setNoticias] = useState<INoticia[]>([]);
     useEffect(() =>{
         const fetchData = async () =>{
             const response = await apiNoticia.index();
-            setNoticias(response.headers);
+            setNoticias(response.data);
 
         };
         fetchData();
@@ -21,15 +22,18 @@ const Header= () => {
     }, []);
 
     return (
+        
+
         <div className="container">
             <FaHome onClick={() => router.push("/")} />
-            {noticias && noticias.map((item)=>{ 
-            <Link key={item.id} href={`/${item.id}`}>
-                {item.titulo}
-            </Link>;
-        })}
+            
+        
         </div>
     )
+    
+        
+
+    
 
 }
 

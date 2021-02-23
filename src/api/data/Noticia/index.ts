@@ -3,7 +3,7 @@ import {INoticia}from "../../../interfaces/Noticia.interface"
 
 class NoticiaData {
     index() {
-        return api.get<INoticia>('noticias')
+        return api.get<INoticia[]>('noticias')
     }
 }
 
