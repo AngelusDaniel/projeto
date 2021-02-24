@@ -1,5 +1,6 @@
 import {createGlobalStyle} from "styled-components"
-import { flattenDiagnosticMessageText } from "typescript";
+
+
 
 export default createGlobalStyle`
     *{

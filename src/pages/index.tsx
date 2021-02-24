@@ -1,26 +1,14 @@
-import{useEffect, useState} from "react";
-import { Header, Loading, Menu} from "../components"
-export default function Home() {
-  const [isLoading, setIsLoading] = useState(true);
-  useEffect(()=>{
-    setTimeout(()=>{
-      setIsLoading(false);
-    }, 2000);
-  });
- 
-  return (
-    
-    <>
-      {isLoading ? (
-        <Loading />
-      ): (
-        <Menu />
-      )
-      
-      }
-    </>
-    
-  )
- 
-  
+import Menu from '../components/Menu';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+function Home() {
+    return (
+        <div>
+            <Menu />
+            Home            
+        </div>
+    );
 }
+
+export default Home;
