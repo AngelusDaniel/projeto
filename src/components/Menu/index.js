@@ -7,6 +7,7 @@ import {
     Nav,
     NavItem,
     NavLink,
+    Container,
 } from 'reactstrap';
 
 const Menu = () => {
@@ -17,25 +18,29 @@ const Menu = () => {
     return (
         <div>
             <Navbar color="dark" dark expand="md">
-                <NavbarToggler onClick={toggle} />
-                <Collapse isOpen={isOpen} navbar>
-                    <Nav className="mr-auto" navbar>
+              <Container>
+                <NavbarBrand href="/">PVNoticias</NavbarBrand>
+                    <NavbarToggler onClick={toggle} />
+                      <Collapse isOpen={isOpen} navbar>
+                        <Nav className="mr-auto" navbar>
 
-                        <NavItem>
-                            <NavLink href="/">Home</NavLink>
-                        </NavItem>
+                          <NavItem>
+                              <NavLink href="/">Home</NavLink>
+                          </NavItem>
 
-                        <NavItem>
-                            <NavLink href="">Sobre</NavLink>
-                        </NavItem>
+                          <NavItem>
+                              <NavLink href="">Sobre</NavLink>
+                          </NavItem>
                         
-                        <NavItem>
-                            <NavLink href="">Noticias</NavLink>
-                        </NavItem>
+                          <NavItem>
+                              <NavLink href="">Noticias</NavLink>
+                          </NavItem>
 
-                    </Nav>
-                </Collapse>
+                        </Nav>
+                  </Collapse>
+                </Container>
             </Navbar>
+            
         </div>
     );
 }
