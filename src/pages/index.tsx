@@ -1,5 +1,5 @@
 import Menu from '../components/Menu';
-import  {Jumbotron, Container} from 'reactstrap'
+import  {Jumbotron, Container, Button} from 'reactstrap'
 import Head from 'next/head';
 import Image from "next/image"
 
@@ -13,16 +13,36 @@ function Home() {
           </Head> 
           <Menu />
           <Jumbotron>
-            <Container>
+            <Container className='text-center'>
               
-              <Image 
-                src="/Public/TelaInicial.png"
+              <Image className="imgprinci"
+                src="/TelaInicial.png"
                 alt="Imagem"
-                width={600}
-                height={600}
+                width={550}
+                height={125}
               />
             </Container>
           </Jumbotron>
+          <div>
+          <Button   
+                    size="lg"
+                    block
+                    outline color="danger"
+                    href=""
+                  >
+                    NOTICIAS
+                  </Button>
+          </div>
+          <div>
+          <Button   
+                    size="lg"
+                    block
+                    outline color="danger"
+                    href=""
+                  >
+                    COMUNIDADE
+                  </Button>
+          </div>
 
         </div>
         

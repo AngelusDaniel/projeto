@@ -29,7 +29,7 @@ const Menu = () => {
                           </NavItem>
 
                           <NavItem>
-                              <NavLink href="">Sobre</NavLink>
+                              <NavLink color="red" href="">Sobre</NavLink>
                           </NavItem>
                         
                           <NavItem>
