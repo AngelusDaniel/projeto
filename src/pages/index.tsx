@@ -2,10 +2,14 @@ import Menu from '../components/Menu';
 import  {Jumbotron, Container, Button} from 'reactstrap'
 import Head from 'next/head';
 import Image from "next/image"
+import 'styled-components';
+import React from 'react';
+
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Home() {
+  
     return (
         <div>
           <Head>
@@ -23,7 +27,7 @@ function Home() {
               />
             </Container>
           </Jumbotron>
-          <div>
+          <div className="botao1">
           <Button   
                     size="lg"
                     block
@@ -33,7 +37,16 @@ function Home() {
                     NOTICIAS
                   </Button>
           </div>
-          <div>
+          <style jsx>{`
+        .botao1 {
+          top: 0px;
+          color: blue;
+        }
+        
+      `}</style>
+
+
+          <div className="botao2">
           <Button   
                     size="lg"
                     block
@@ -43,6 +56,13 @@ function Home() {
                     COMUNIDADE
                   </Button>
           </div>
+          <style jsx>{`
+        .botao2 {
+          position: relative;
+          top: 5px;
+        }
+       
+      `}</style>
 
         </div>
         
